@@ -1,0 +1,33 @@
+\documentclass[sigconf]{acmart}
+
+\input{main-pre-authors.tex}
+
+\author{Author One}
+\affiliation{The Institute}
+\email{author1@institute.edu}
+
+\author{Author Two}
+\affiliation{Another Institute}
+\email{author2@another.edu}
+
+\author{Author Three}
+\affiliation{Yet Another Institute}
+\email{author2@yai.edu}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{Author 1 \textit{et al.}}
+
+\input{abstract.tex}
+\input{ccsxml.tex}
+\input{keywords.tex}
+
+\maketitle
+
+\input{body.tex}
+
+\input{acknowledgements.tex}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{anonymous} 
+
+\end{document}
