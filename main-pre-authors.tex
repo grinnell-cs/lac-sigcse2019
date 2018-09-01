@@ -33,6 +33,23 @@
 %\editor{???}
 
 % Some settings
+\newenvironment{blockquoteA}
+{\par\noindent\ignorespaces\slshape }
+{\par\noindent\ignorespacesafterend}
+
+\newenvironment{blockquoteB}
+{\begingroup\addtolength\leftmargin{-0.2in}\begin{quote}\slshape}
+{\end{quote}\endgroup}
+
+% https://latex.org/forum/viewtopic.php?t=7992
+\newenvironment{blockquote}{%
+  \list{} {
+    \leftmargin0.2in
+    \rightmargin\leftmargin
+  }
+  \slshape
+  \item\relax}
+{\endlist}
 
 % And the document
 \begin{document}
