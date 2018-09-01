@@ -1,6 +1,6 @@
 default: anonymous.pdf lac.pdf
 
-%.pdf: %.tex %.bib main*.tex
+%.pdf: %.tex %.bib *.tex
 	pdflatex $*
 	bibtex $*
 	pdflatex $*
