@@ -1,327 +1,643 @@
 \section{Introduction}
 
-THIS INTRODUCTION IS TAKEN FROM THE DSSG PAPER.  IT NEEDS TO BE
-REWRITTEN.
+In spite of a host of efforts to diversify the field, computer
+science remains a field dominated by white and Asian males.  A
+recent Taulbee survey \cite{Taulbee2016} suggests that only 17.9\%
+of bachelor's degrees in computer science are awarded to students
+identified as female, 3.1\% to students identified as Black or
+African-American, and 7.5\% to students identified as Hispanic
+\cite{Taulbee2016}.  A variety of factors likely lead to this
+problem.  Unfortunately, many parents and teachers still treat
+technical fields as a domain for boys and men.  As Cheryan et al.
+\cite{Cheryan2010} has demonstrated, one major factor is that
+perceptions of ``who does computer science'' leads many women and
+students of color to dismiss the field.  But students are not
+just discouraged by issues of identity; Guzdial \cite{Guzdial2009}
+suggests that there are also issues of interest; many students
+perceive cmputing as ``irrelevant'' and ``asocial''.
 
-For the past few decades, both the field of computing in America and
-computer science in higher education have suffered from significant
-underrepresentation of women and domestic students of color.  A
-wide variety of projects have attempted to address this issue.
-However, even after all of these efforts, a recent Taulbee survey
-still suggests that only 17.9\% of bachelor's degrees in computer
-science are awarded to students identified as female, 3.1\% to
-students identified as Black or African-American, and 7.5\% to
-students identified as Hispanic \cite{Taulbee2016}.  More work is
-needed.
+These are complex issues to address; a single type or level of
+intervention is not enough.  And, because these biases start early,
+many educators are developing early interventions
+\cite{McGill2015,Decker2016}.  A number of organizations are helping
+address this ``pipeline problem'', including Girls Who Code,
+Black Girls Code, AnitaB.org, and the Girls Computing League.
 
-Many factors are at play in this problematic situation.  One that
-is repeatedly identified is a ``pipeline problem'', with members
-of these groups deciding early on that they do not belong in computer
-science \cite{Gurer2002}.  As a result, the broader compute science
-community has tried a variety of outreach activities
-\cite{McGill2015,Decker2016}.
+Over the past few years, our research team has explored extracurricular
+approaches that target students in elementary and middle schools.
+In particular, we have considered novel summer ``code camp'' camp
+offerings that emphasize meaningful aspects of computing.  Although
+such meaningful approaches have shown some success at the college
+level \cite{Goldweber2013, Goldweber2018}, they are rarely used at
+these earlier level \cite{DeWitt2017}.  Instead,
+most mainstream camps focus on popular aspects of computing, like
+Minecraft, Lego robots, or App development.
 
-Over the past three years, our research team has explored the effect
-of summer code camps on student interest and self efficacy.  Rather
-than employing the more common approaches to computing the emphasize
-playful aspects of computing (e.g., through robots, games, or
-Minecraft) \cite{code-camp-survey-sigcse-2017}, we emphasized
-meaningful uses of computing \cite{arts-coding,dssg-sigcse-2018},
-which we hypothesize will help build students' self efficacy and
-interest, particularly among students from groups traditionally
-underrepresented in computing.
+While many of our camps have emphasized computing for social good,
+in this project we chose to adapt a very different approach to
+computing, one that emphasizes the digital humanities (DH), a growing
+field that that explores computing through a humanistic lens, not
+only exploring the human implications of computing, but also
+considering how computing can support broader approaches to humanistic
+inquiry.  Because DH reveals different ways to apply algorithmic
+and computational thinking, DH-based approaches have the potential
+to attract students who might not otherwise consider computing.  Of
+course, DH encompasses a wide variety of approaches and it is not
+possible to emloy them all; we focused primarily on problems related
+to language generation or analysis.
 
-In this paper, we describe a very different approach to introducing
-computing, one that emphasizes the digital humanities, particularly
-problems related to language generation or analysis.  ADD MORE STUFF.
+In section 2, we describe the local context of the camp, focusing
+on our community and the types of students who enrolled.  In section
+3, we provide additionald etail about our approach to the digital
+humanities and describe the design and structure of the camp.  In
+section 4, we describe the mechanisms we used to assess the efficacy
+of the curriculum and review data from camper surveys.  Finally,
+in sections 5 and 6, we consider some implications of the data and
+suggest future steps.
 
-In section 2 of the paper, we describe the local context of the
-camp, particularly the characteristics of our community and the
-students who enrolled.  In section 3, we describe the design and
-structure of the camp and provide additional detail about our
-approach to the digital humanities.  In section 4, we provide a
-broader view of the curriculum of the camp.  In section 5, we review
-data from camper surveys.  Finally, in sections 6 and 7, we further
-consider the implications of the data and our observations from the
-camp.
+\section{Local context}
 
-\section{Background}
+``All politics is local'', as they say.  It is unlikely that the
+same holds true for computing outreach.  Nonetheless, local context
+is important, too.  The approaches appropriate to a community that
+has a strong tech industry are likely different than those to one
+in which tech is absent.  Similarly, the interests of students in
+a high-SES\footnote{socio-economic status} community may be different
+than those in a low-SES community, as will the ability of families
+to take advantage of enrichment activites.  Hence, we begin with a
+consideration of our local context.
 
-\subsection{Local context}
+Our institution is situated in the middle of a small town (10,000
+residents) in a midwestern farming state.  Like many college towns,
+it includes people from a wide variety of backgrounds; the college
+attracts a broader and educated group of people, not just faculty
+and their partners, but others interested in the benefits of living
+near an institution of higher learning.  But the range of backgrounds
+is broad and we have a large population of ``working poor'': even
+though the unemployment rate in town is under 3\%, the poverty rate
+in our county is over 30\%.
 
-THIS SECTION IS COPIED FROM THE DSSG PAPER.  IT NEEDS SOME UPDATE.
-OR MAYBE IT NEEDS DROPPING
+While we knew that our camp would draw from the college community,
+our particular interest was students who, because of their background
+and the lack of a local tech industry, might not otherwise consider
+a career in computing or even attending college.  We think that
+attracting such students is particularly important because computing
+careers are likely to among the most lucrative available to them.
+We paid particular attention to ways to support such students,
+including a low initial camp fee with meals and snacks included, a
+``no questions asked'' financial aid model, and free early-drop-off
+and late-pick-up options.
 
-Our institution is in a rural community (approximately 10,000
-residents) in a relatively white state---91.4\% of the population was
-identified as white in the latest census.  Our community has a large
-population of working poor: While the poverty rate in our county
-is over 30\%, the unemployment rate is under 3\%.  Surrounding
-communities have similar populations.
-
-In designing the camp, we strove to address the particular concerns
-of our community.  While we wanted to address the underrepresentation
-of girls and students of color, we also wanted to make sure that
-the camp was accessible to students of lower socio-economic status.
-Building these students' self-efficacy seems particulary important
-as the opportunities presented by computing careers can make a huge
-difference in their lives.  We used a variety of approaches to
-support these students, including free tuition for students on free
-or reduced lunch programs\footnote{Unfortunately, because many feel
-a stigma in our schools, many students who would qualify for these
-programs choose not to enroll.  The problem is most significant at
-the high-school level, but it is clearly also in play at the
-middle-school level.  To help address that stigma, we relied only
-on families' self reports on the application form, and not on data
-from the school district.}, providing meals and snacks for every
-camper, subsidizing costs for all campers, and providing no-cost
-options for early drop-off and late pick-up.
-
-Because there are few educational enrichment activities available
-to rural students, we drew students not only from our own community,
-but also from neighboring communities.  Some came from as far as
-sixty miles away, suggesting that there are far too few such
-opportunities for students in rural areas.
-
-Although we had originally capped the camp at 32 students, experience
+We drew students from not only our own community, but also a number
+of surrounding communities.  In addition, a few parents who regularly
+commute sixty miles or so to our town registered their children.  Our
+target audience was middle-school students entering 5th through 8th grade.
+We had originally capped the camp at 32 students; however, experience
 from prior camps, which suggested that we'd have a bit of melt the
-first day (one of the disadvantages of a low enrollment cost, we
-expect) we allowed 38 students to enroll.  We had approximately 34
-students at each day of camp.  N of these had previously taken a
-separate camp on data science and social good, N in summer 2017
-and N in summer 2018.
+first day,\footnote{That is one of the disadvantages of a low enrollment cost, we
+expect} we allowed 38 students to enroll.  Our estimates were close;
+we had approximately 34 students at each day of camp.  Two students
+had previously attended our elementary-school camp, which emphasizes
+coding for tangible crafts.  Ten had participated in a middle-school
+camp on data science in the prior year, five had participated in
+a middle-school camp on data science two weeks earlier, and five
+had participated in both years.\footnote{We take the number of returners
+as a positive sign of the value students and parents place on the camp.
+Unfortunately, returners complicated both the camp curriculum and the
+data analysis.}  
 
-Both college students and local high-school students served as
-counselors for the camps.  We generally tried to maintain a ratio
-of about one counselor per four campers in the classroom; that ratio
-varied slightly as counselors took breaks or worked on preparation
-for other activities.  As a result of this relativley low ratio,
-counselors were able to provide support promptly and effectively.
-And, because counselors were not pressed for time, they were able
-to encourage campers to find answers to their problems themselves,
-rather than provide immediate solutions.
+\section{Camp design}
 
-\subsection{Digital Humanities}
+As noted above, one of our core goals in this project is to explore
+alternative approaches to summer code camps.  Spurred, in part, by
+a growing institutional emphasis on the digital humanities, we
+decided to add a camp that drew upon the digital humanities to our
+repertoire.
 
-ADD DEFINITION AND NOTES.
+\subsection{Digital humanities}
 
-DESCRIBE ERIK'S COURSE.  For example, one of the first digital humanities
-courses at our institution, which focused on literary studies, took a
-three-part approach.  Although students began the semester with a 
+As in the case of many modern computational disciplines, such as
+data science, definitions of the digital humanities vary widely
+depending on the background and interests of those defining the
+field.  Some focus on approaches to language, particularly of larger
+corpora of texts, to find patterns through statistical algorithms
+like topic modeling.  Others emphasize the use of computers to
+visualize aspects of traditional humanistic kinds of data.  Still
+others focus on ways in which computers permit new modes of interactive
+writing.  Many also include humanistic approaches to computing.
+For example, authors of a recent text suggest that,
+\begin{blockquote}
+For us, digital humanities simply represents a community of scholars and teachers interested in using or studying technology. We use humanities techniques to study digital cultures, tools, and concepts, and we also use computational methods to explore the traditional objects of humanistic inquiry. \cite{Battershill2017}
+\end{blockquote}
+
+In choosing an approach for the camp, we drew upon one of the first
+digital humanities offerings at our institution.  This course, which
+focused on the digital humanities in literary studies, took a
+three-part approach.  Although students began the semester with a
 environmental scan of the digital humanities, identifying everything
 from markup languages for poetry to issues surrounding the dominance
-of American and Western Europe in digital humanities work, the course
-focused on three primary issues: writing, map-based analysis, and the
-use of coding as a tool to explore texts.
+of American and Western Europe in digital humanities work, the
+course focused on three primary issues: writing, map-based analysis,
+and the use of coding as a tool to explore texts.  That is, students
+first read and analyzed a variety of interactive online texts and
+used tools to build similar texts.  Next, students read a more
+traditional work of fiction and used tools like Google Maps to
+explain and explore the use of places in the text.  Finally, students
+both learned to use Python to write simple programs to look for
+patterns in texts and employed tools for more sophisticated analyses,
+such as topic modeling.
 
-\section{Designing the camp}
+\subsection{Why digital humanities?}
 
-ADD A FEW SENTENCES
+At first glance, the digital humanities may seem like an odd topic
+for a camp for middle-school students, few of whom likely know what
+the humanities are.  However, by the time students reach college
+level, we see a disproportionate number of women entering the
+humanities rather than the sciences.  There is also a long-standing
+sterotype that girls are generally more drawn language and literature
+than are boys.  For example, a recent Brookings report \cite{Loveless2015}
+suggests that,
+\begin{blockquote}
+The most recent results from reading tests of the National Assessment of Educational Progress (NAEP) show girls outscoring boys at every grade level and age examined. Gender differences in reading are not confined to the United States.
+\end{blockquote}
+
+Loveless also reports on a different set of stereotypes that affect
+boy's interest in reading.  
+\begin{blockquote}
+Cultural influences steer boys
+toward non-literary activities (sports, music) and define literacy
+as a femiine characteristic. This explanation believes cultural
+cues and strong role models could help close the gap by portraying
+reading as a masculine activity.
+\end{blockquote}
+
+While our primary hope was to use girl's likely interest in reading
+and literature to draw them to computing, observations like Loveless's
+suggest that digital humanities could also help draw more boys to
+language and literature.
+
+
+\newcommand{\afk}[1]{\textit{#1}}
+\newcommand{\proj}[1]{\textit{\textbf{#1}}}
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Monday} 	& \textbf{Tuesday} 	& \textbf{Wednesday} 	& \textbf{Thursday} 		& \textbf{Friday} \\ \hline
+Camp Orientation 	& Opening Slideshow 	& Present: Web App	& RegExp 			& SH Awards Ceremony \\ \hline
+Intro Algorithms I	& Racket Review		& \proj{Mad Libs}	& 				& Project Work Time \\ \hline
+\afk{Icebreakers}      	& Pair Programming 	& 			& 				& \\ \hline
+\afk{Snack Break} & \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break} \\ \hline
+Intro Algorithms II	& Discuss Lang. \& Code	& Intro Conditionals	& \proj{Analyze Web Pages I}	& Project Work Time \\ \hline
+Intro Racket I		& Intro Strings		& Analysis w/Files and Lists I	& \afk{Scavenger Hunt}		& \\ \hline
+\afk{Lunch} & \afk{Lunch}	& \afk{Lunch}	& \afk{Lunch}	& \afk{Lunch} \\ \hline
+\afk{Recess} & \afk{Recess}	& \afk{Recess}	& \afk{Recess}	& \afk{Recess} \\ \hline
+Intro Racket II		& Language Generation	& Analysis w/Files and Lists II	& \proj{Analyze Web Pages II} 	& Poster Prep \\ \hline
+Intro Scavenger Hunt	& Racket Web Server 	& Present: Mad Libs	& Transform Web Pages		& Presentation Prep \\ \hline
+Intro HTML \& CSS 	&			& \afk{Scavenger Hunt}	& \afk{Scavenger Hunt}		& \\ \hline
+\afk{Snack Break} & \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break} \\ \hline
+\proj{Hypertext Stories}& \proj{Web App}	& Project Intro 	& Project Work Time		& Welcome Visitors \\ \hline
+Present: Stories 	& \afk{Scavenger Hunt}	& Project Brainstorm	& 				& Show and Tell \\ \hline
+\end{tabular}
+\caption{Camp Curriculum.  ``Away from keyboard'' activities appear in italic and mini-projects appear in bold italic.}
+\label{table:curriculum}
+\end{table*}
 
 \subsection{Primary activities}
 
-Our goal was to draw inspiration from the digital humanities
+Drawing our information from our institution's digital humanities in
+literary theory, we decided to focus primarily on teaching computer
+science principles through the application of computer science to text,
+including text generation, text manipulation, and text analysis.  That
+led to the creation of a series of core activities across the week of
+the camp.  We focused on mechanisms for representing language,
+as illustrated in HTML; on new ways of writing, including 
+both hypertexts and the language generation sometimes associated
+with Twitter 'bots; and on ways to use computers to analyze texts.
 
 \subsubsection{Introduction to HTML and Web pages}
 
-Introduces formal language.  Provides fun activity.
+We began with an activity in which students built and linked Web
+pages.  Such an activity provides many benefits.  Students find it
+empowering to realize that they can build pages that are available
+to ``anyone'' on the World-Wide Web.  The use of cascading style
+sheets also makes it more fun, as they have broad freedom to style
+pages.\footnote{Note that although CSS was in our original plans
+for the camp, some constraints led us to leave them out of the
+original HTML lesson.}  For students used to a block-based language,
+HTML provides a relatively simple way to introduce issues of formal
+language and syntax.
 
 \subsubsection{Choose your own adventure}
 
-Undertanding of hypertext and linking.
+Web pages provide some benefit by themselves.  However, as we had seen
+in the literary analysis course, having students build more sophisticated
+hypertexts provides additional sense of agency.  We phrased hypertexts
+as an opportunity to write short ``choose your own adventure'' stories.
+We provided students with an initial template and gave suggestions on
+possible directions.  In addition to building interest and efficacy, these
+activities helped students understand issues of linking and naming.
+While some were frustrated by the need to get the target of a link
+``just right'', most quickly learned that ``computers are dumb; they
+can only do what you explicitly tell them to''.
 
 \subsubsection{Language generation}
 
-Contextualize with Twitter 'bots.  Helps them think about
-the structure of language.  Tends to be amusing.  Also provides
-some insight into language.
+Using Twitter 'bots as a motivating example, we guided through
+students through the design of programs that generated language
+using simple generative grammars.  We first introduced them to a
+simplified Haiku generator expressed as series of rules in a
+programming language.  For example,
+
+\begin{itemize}
+\item A Haiku is a capitalized five-syllable group of words, followed
+  by a seven-syllable group of words, followed by a five-syllable
+  group of words.
+\item A five-syllable group of words can be either (a) a two-syllable
+  word followed by a three-syllable word; or (b) a two-syllable word
+  followed by a one-syllable word, followed by a two-syllable word;
+  or a one-syllable word followed by a three-syllable word, followed
+  by a one syllable word.\footnote{We realize that there are many
+  other options.  As we note to the students, this is intentionally
+  a \textit{simplified} grammar.}
+\item A one-syllable word can be ``fast'' or ``blue'' or ``code'' or ....
+\end{itemize}
+
+After introducing the structure and showing some examples, We
+challenged them to add more words and more structures.
+
+In the second language generation exercise, we worked with students
+to develop a framework for sentence generation using both simple
+subject plus intransitive verb and subject plus transitive verb
+plus object sentences.  While few students knew this terminology,
+most were able to figure out the general structure.
+
+Finally, we had students work in larger groups with a counselor to
+try to write procedures that generated longer stories.    We knew
+that such procedures would be complicated, but with some pointers
+and gentle nudges, most groups were able to write self-referential
+procedures that generated stories.
+
+As one might expect, writing poetry and stories and then reading
+the results aloud produces a good deal of amusement.  These initial
+forays into language generation also provided a number of useful
+learning goals.  It helped students get accustomed to a new programming
+language; all that is necessary for the simplest language generation
+are the ability to define new zero-parameter procedures and to use
+a few basic commands for appending strings or choosing between one
+of a few actions.\footnote{Although the latter procedure appears
+in few languages, it was relatively straightforward to write and
+provide to our students.}   Looking at the forms of the different
+rules deepened students' understanding of the structure of language, which
+we expect to be useful for both artificial and natural languages.
+
+\subsubsection{Mad Libs}
+
+As a counterpart to the language generation activity, we also had students
+build Web-based ``Mad Libs'' programs which prompt for a variety of types
+of words (e.g., an adjective, a color, a proper noun) and then put those
+into a template to construct a story.  We provided students with a basic
+framework, both the form and the script that processes the form.  They
+then added new inputs and revised the template.
+
+Most students were familiar with Mad LIbs, so this domain was
+familiar.  And, as in the other exercises, students enjoyed having
+us read the generated stories aloud.  Knowing that their work would
+be read proved motivational.  The structure of the program provided
+an opportunity to deepen students' understanding of variables and
+to discuss some aspects of the architecture of the World Wide Web.
 
 \subsubsection{Language analysis}
 
-Particularly of text files and tweets.  Gives understanding of poer
-of computers.  Begins to involve a broader range of algorithmic
+As the examples above suggest, most of the projects emphasized the
+creation of new computational artifacts.  However, we also considered
+it important to give the students experience with the use of computers
+as analytical tools.  We chose two basic types of text files to analyze,
+a pre-screened set of Tweets from selected celebrities\footnote{Beyonce
+was particularly popular.} and a few classic texts downloaded from
+Project Gutenberg.  We also provided resources for them to do more
+complex analyses on Web pages, such as to extract and count various
+tags or to search within particular sections.
+
+These kinds of exercises not only provided students with a broader 
+understanding of the power of computers, it also gave us the opportunity
+to introduce a variety of other algorithmic issues, such as conditionals.
 issues.
 
-\subsubsection{MadLibs}
+\subsubsection{Additional activities and topics}
 
-Provides context for variables.  Familiar domain.  Also fun.
+While the activities above provided the primary projects for the camp,
+we also introduced a number of other ideas and tools in smaller lessons.
+For example, although we did not include a large text-manipulation project,
+we did introduce them to the basics of pattern matching and
+replacement using regular expressions and provided them with a framework
+in which they could apply those tools to transforming Web pages.
 
 \subsection{Platforms and languages}
 
-In every other camp, we have started with a block programming language,
-such as Scratch.  Because a significant portion of this camp had
-either participated in a prior camp or had encountered block
-programming in school, we looked for languages that would feel less
-familiar, but would still be appropriate for this level of students.
+In every other camp we have offered, we have started with a block
+programming language, such as Scratch.  However, a significant
+portion of this camp had either participated in a prior camp or had
+encountered block programming in school.  Hence, we looked for
+languages that would feel less familiar to the students, but would
+still be appropriate for this level.
 
-We settled on Racket.  Interpreted.  Built in Web-server with natural
-Web page model.  Could also tell students
+We settled on a somewhat nontraditional approach, Racket.  While a
+LISP descendent may not seem to be an appropriate language for
+middle school students, the Bootstrap
+project\footnote{http://www.bootstrapworld.org/} has shown that
+Racket can be a quite successful language for this age group.
 
-MORE TO COME
+We saw many advantages to using Racket.  First, it would be new to
+all students.  That helped ensure that all students felt like they
+were encountering something novel.  We also use Racket as the
+introductory language in our college curriculum.  Not only did that
+mean that the counselors were familiar with it, it also provided
+us with the opportunity to build self-efficacy by talking to students
+about the level of work they were doing.  Racket also provides a
+wide range of available libraries, including a built-in Web server
+and libraries for Web processing.  In addition, because Racket can
+download libraries from Git, we were able to easily give students
+access to additional procedures we developed.
 
 \subsection{Final projects}
 
-Conclude with open-ended project: "With your partner, do something
-interesting with what you've learned.  Present it to the class."
+As in our other camp offerings, we concluded with an open-ended
+project of the form ``With your partner, do something interesting
+with what you've learned in camp and then present it to the class
+and to your parents.'' Of course, we scaffolded this process.  We
+helped students envision the range of possible projects through a
+series of examples.  We had them journal about topics and approaches
+they found interesting and then explore them further in small groups.
+Each student then had the opportunity to ``pitch'' a project idea
+to the class.  After the pitches, students ranked their top five
+projects.  In the evening, the counselors used those rankings and
+their knowledge of student ability and personality to pair students
+into project groups.
 
-Brainstorming, presentation, and partnering.
+In addition to developing a project, each pair was also expected to make
+a poster that summarized the project and to give a short (2-3 minute)
+presentation to an audience of parents and friends and the end of the
+camp.
 
-16 projects.  Two basic Madlibs.  Two
-more advanced Madlibs that including one that combined ideas from Madlibs 
-and hypertexts; in one case, users would fill out information ...
+\subsection{Structuring activities}
 
-\subsection{Structuring topics and days}
+Because our goal in the camp was not to create programmers to much as
+to build interest, we de-emphasized syntax and focused more on broader
+concepts.  Rather than ask students to program from scratch, we often
+asked them to modify existing programs or to fill in gaps in partial
+programs.  Because we did not intend to develop mastery, we were
+able to rapidly introduce a wide variety of topics.
 
-THIS SECTION IS COPIED VERBATIM FROM THE DSSG PAPER.  IT NEEDS
-REWRITING.
+The range of ages and backgrounds presented a challenge.  Hence,
+we focused on a model in which each pair of students could work at the
+pace most appropriate for them.  We minimized lecture and focused more
+on activities in which students could ``go and try it yourself'', doing
+a series of worksheets and program extensions.  We also provided a wide
+variety of reference sheets and relied on a low camper to counselor
+ratio to ensure that help was readily available when students were stuck.
 
-In designing the camp, we considered both technical outcomes---core
-computational techniques like conditionals, loops, and subroutines--as
-well as more conceptual outcomes---we wanted students to feel the
-power that comes with writing programs and to realize that they had
-the ability to write such programs.  We had also identified a
-necessary set of skills for students to complete the final projects
-in data science.  As is the norm in designing such camps, we then
-considered the natural flow of ideas, reflecting on the transition
-from block-based languages to a text-based language and an appropriate
-spiral approach that helped students revisit topics in different
-levels of depth.
+\subsection{Camp content and structure}
 
-While our primary focus was on computing topics, we knew from past
-experience in this camp and others that students of this age group
-would not learn well if they spent the day in front of the computer.
-Hence, the camp schedule incorporated frequent ``away from computer''
-activities including short breaks to play active and engaging games.
-Snacks were offered during one of the breaks before lunch, and
-another after lunch.
+Our primary goals were to increase students' interest in computing,
+to build self-efficacy, and to broaden their understanding of the possibilities
+inherent.  However, we knew that the days of camp could not feel just like
+days of school.  In order for students to maintain focus, they needed
+breaks and activities away from the computer.  Hence, in addition to
+providing lunch breaks and snack breaks, each day also included time for 
+recess and a building or campus ``scavenger hunt'' activity.
 
-Moving the activities away from the computer did not mean that we
-necessarily moved them away from thinking about core topics.  For
-example, one the first day of camp we moved to an outdoor amphitheater
-to carry out the algorithms they had developed for reuniting families
-after a disaster.  We also included CS Unplugged \cite{csunplugged}
-activities to introduce Computer Science concepts in a fun and
-active environment.  During afternoon breaks, we invited faculty
-and students in the Computer Science department to introduce campers
-to their research.  
+Our experience from prior camps sugggested that students were most
+amenable to learning new material in the morning and that focus
+tended to fade at the end of the day.  By putting programming
+projects at the end of the day, we were get students to focus more.
 
-We also exposed students to the broader view of ds4sg early and
-repeatedly.  Most days, counselors presented a case study that
-integrated new concepts with social good data. For example, our
-second case study taught campers how to organize data about weather
-changes in a way that would allow them to analyze it in Python.
-Most of the last day was devoted to working on final projects,
-getting them ready to present to their friends and family.
+Table~\ref{table:curriculum} provides an overview of the curriculum.
+As that overview suggests, we were not always able to maintain a uniform daily 
+schedule.  For example, timing of scavenger hunts was often constrained by
+the availability of locations on campus.  
 
-\section{Camp structure}
-
-NEED TO INSERT A CHART OR SOMETHING SIMILAR SHOWING THE OVERVIEW OF THE
-CAMP.
-
-\section{Assessment}
+\section{Data and Analysis}
 
 In order to measure the campers' change in self-efficacy and coding
-confidence in a quantitative manner, we used pre- and post-survey
-instruments based on upon the Georgia Computes! instruments
+confidence in a quantitative manner, we used pre-camp and post-camp
+survey instruments based on upon the Georgia Computes! instruments
 \cite{Bruckman2009} that ask students to respond to various statements,
 such as ``I look like a computer scientist'' and ``I like the
 challenge of computing'' on a five-point Likert scale.  The questions
-appear in fig.~1.  Through these surveys, we were able to get a
-good sense of what subjects and concepts the campers were comfortable
-with prior to attending the camp, so as to measure any significant
-changes in their outlook by the end of the camp.  
-
-NEED TO INSERT THE REVISED SURVEY.
-SURVEY HAS BEEN REVISED.
+appear in Fig.~\ref{figure:survey}.  Through these surveys, we were
+able explore changes in student attitudes.  In addition, supplemenatry
+questions about background in the pre-camp survey and about camp
+activities in the post-camp survey provided us with additional
+context.
 
 \begin{figure}
 {\small
-1:\textit{I look like a computer scientist.} \\
-2:\textit{Boys can do computing.} \\
-3:\textit{Girls can do computing.} \\
-4:\textit{I know a lot about computing.} \\
-5:\textit{I can become good at computing.} \\
-6:\textit{I know more than my friends about computers.} \\
-7:\textit{I like the challenge of computing.} \\
-8:\textit{Computer science is cool.} \\
-9:\textit{I feel comfortable using a computer.} \\
-10:\textit{I want to have a job in computing.} \\
-11:\textit{I want to learn more about computing.} \\
-12:\textit{Computer scientists are creative.} \\
-13:\textit{Solving problems is fun.} \\
-14:\textit{Computing involves people working together.} \\
-15:\textit{I like computing.} 
+\begin{tabular}{rl}
+1 & \textit{I look like a computer scientist.} \\
+2 & \textit{Boys can do computing.} \\
+3 & \textit{Girls can do computing.} \\
+4 & \textit{I know a lot about computing.} \\
+5 & \textit{I can become good at computing.} \\
+6 & \textit{I know more than my friends about computers.} \\
+7 & \textit{I like the challenge of computing.} \\
+8 & \textit{Computer science is cool.} \\
+9 & \textit{I feel comfortable using a computer.} \\
+10 & \textit{I want to have a job in computing.} \\
+11 & \textit{I want to learn more about computing.} \\
+12 & \textit{Computer scientists are creative.} \\
+13 & \textit{Solving problems is fun.} \\
+14 & \textit{Computing involves people working together.} \\
+15 & \textit{I like computing.} 
+\end{tabular}
 }
+\label{figure:survey}
 \caption{Survey statements}
 \end{figure}
 
-DATA?  A CHART ISN'T NECESSARY, BUT SOME STATEMENT ABOUT WHAT IS AND
-IS NOT SIGNIFICANT.
+\begin{figure}
+\includegraphics[width=3.3in]{images/boys}
+\label{figure:boys}
+\caption{Survey data: Boys}
+\end{figure}
 
+\begin{figure}
+\includegraphics[width=3.3in]{images/girls}
+\label{figure:girls}
+\caption{Survey data: Girls}
+\end{figure}
 
-Using our pre- and post-surveys, we were able to run a paired T test to
-analyze our data. We found that questions 1 (p = 0.045), 2 (p = 0.083), 
-4 (p = 0.040), and 6 (p = 0.021) were all statistically significant. 
+Figures \ref{figure:boys} and \ref{figure:girls} illustrate the changes
+among both boys ($n=26$) and girls ($n=8$).
+Informally, we saw an increase in student responses on all questions
+except questions 11 (\textit{I want to learn more about computing}), 
+13 (\textit{Solving problems is fun}), and 15 (\textit{I like computing}).
+However, the decreases were not statistically significant at $\alpha\le 0.1$,
+and the original rankings were relatively high (4.23, 3.88, and 4.35,
+respectively).  There was also likely some impact of prior experience;
+given that many had attended a prior camp, it was unclear whether this
+camp was likely to have an effect.
 
-Question 1 had an increase of .48 points to end at an average score 
-of 3.645.
+We ran a paired t-test using the pre-camp and post-camp surveys to
+explore changes in students' attitudes.  In spite of camper prior
+experience , we found statistically significant growth on questions
+1 (\textit{I look like a computer scientist}, $p < 0.05$), 2
+(\textit{Boys can do computing}, $p < 0.1$), 4 (\textit{I know a
+lot about computing}, $p < 0.05$), and 6 (\textit{I know more than
+my friends about computers}, $p < 0.05$).  We note that while there
+was a statistically significant increase in the question 2 responses
+and not in the question 3 responses, question 3 had a higher average
+score on the pre-surveys and and increase of only 0.0645 points.
+The average post-survey score for both questions 2 and 3 was 4.93.
 
-Question 2 had an increase of 0.1 points to end at and average score of
-4.93. We note that while there was a statistically significant increase
-in the question 2 responses and not in the question 3 responses, 
-question 3 had a higher average score on the pre-surveys and and 
-increase of only 0.0645 points. The average post-survey scores
-for both questions 2 and 3 were 4.93.
-
-Question 4 had an increase of .53 points to end at an average score
-of 3.63.
-
-Question 6 had an increase of .516 points to end at an average score
-of 3.77.
+Although we separately analyzed survey responses for boys and girls,
+we did not do a similar analysis for returners and new campers as
+the returning campers are a complicating factor.  For example, a
+new camper who masters material at a good rate may still consider
+themselve inferior to their peers who seem to know so much already.
 
 \section{Discussion}
 
-Informal obervations
+Because we had a comparatively small number of campers, surprisingly
+small female participants (an issue we will discuss further), and
+a large number of repeat participants, we do not feel confident
+claiming that this curiculum has had a significant effect on the
+students.  Nonetheless, it is worth exploring both the data and
+some informal observations we made during the camp.
 
-A student who had been reluctant to work with others or ask for help
-in a prior camp was enthusiastic about the project and showed great
-flair in their presentation.
+We were surprised at the initial responses to questions 2 (\textit{Boys
+can do computing}) and 3 (\textit{Girls can do computing}).  We did
+not expect either the high levels of agreement with those statements
+or the similarities of responses from boys and girls, particularly
+given that boys usually agree less about girls' ability to do
+computing.  It may be that schools are doing a better job of
+encouraging students to think broadly.  However, since these students
+come from a variety of school districts, it may be that returning
+students had already embraced this broader notion of who can do
+computing.
 
-During one of the scavenger hunts, one of the campers said "I never
-thought about attending college.  But this place is cool.  Do you
-think I could get in?"
+We also admit that we were both surprised and frustrated by the
+small number of female students enrolling in the camps.  Our other
+camps on code crafts and on computing for social good tend to draw
+a nearly even mix of boys and girls.  It may be that our hypothesis
+that the digital humanities would attract young women was incorrect.
+It may be that we failed to advertise the camp appropriately---while
+we thought a title of ``Language and Code'' would highlight the
+humanistic aspect, it may be that many potential students read it
+as ``programming language''.  We will need to revisit this question
+before offering the camp again.
 
-Attracted fewer girls than our camps focused on social good.  We had
-expected that a focus on language would also broaden participation.  
+\subsection{Informal obervations}
 
-Packed in too much.
+We were also able to see a number of effects that we could
+not easily measure with our instrument.
 
-A visiting K-12 teacher noted that even some of the exercises helped
-students think more deeply about language, particularly Madlibs and language
-generation.  It could be that this is a natural way to incorporate more
-computing in language courses not so much to teach computing, but to 
-help students gain a deeper understanding of language.
+One returning student, who had been reluctant to work with others
+or to ask for help in a prior camp, thrived in this camp.  He not
+only approached the project with enthusiasm, but showed great
+flair in his presentation.
 
-Parents called and emailed after the camp asking for access to the
-kid's projects.
+Although our primary goal is to promote computing, we also expect
+that the camps can promote college.  During one of the scavenger
+hunts, one of the campers said ``I never thought about attending
+college.  But this place is cool.  Do you think I could get in?''
+We assured him that with hard work, he could.
 
-Students appreciated knowing that (some of) their work was on the
-WWW and could be accessed from anywhere.  Empowering!
+A visiting K-12 teacher noted that they appreciated the ways that
+some of the exercises helped students think more deeply about
+language, particularly the Madlibs and language generation projects.
+It could be that this is a natural way to incorporate more computing
+in language courses not so much to teach computing, but to help
+students gain a deeper understanding of language.
 
-\section{Conclusions}
+\subsection{Projects}
 
-WRITE ABOUT STRENGTHS AND POTENTIALS.
+We had hoped that students would evenly distribute among the various
+approaches to projects, drawing upon one or more of the approaches
+from the mini projects: Hypertext stories, language generation, Mad
+libs, text analysis, and Web page manipulation.  Nonetheless, the
+majority decided to write ``choose your own adventure'' stories.
 
-Although many middle-school outreach activities focus on students'
-perceived interests, such as video games or ``exciting'' technologies,
-it is clear from our experiences that computing for social good
-provides a platform for helping students grow in self-efficacy and
-interest.  We hope that our modest project will inspire others to
-take a similar approach.
+There were, of course, exceptions.  Two teams adapted the basic Mad
+Libs model.  Two teams worked with counselors to build more advanced
+projects that combined Mad Libs with hypertext stories.\footnote{Whle
+the students could modify existing programs, it was clear that they
+had not developed the mastery necessary to build more sophisticated
+programs.  Counselors provided the additional support necessary.}
+In one case, the initial Mad Libs answers carried from page to page,
+so that characters and other words would reappear.  In the other,
+students asked questions on each page and accumulated data for a
+final page.  Two teams explored issues of language generation,
+creating more complex texts and, in one case, attempting to including
+rhyming in poems.  
+A few teams even managed to avoid the ``language and code'' theme.
+One built a time-wasting click counter.  A second attempted to build
+a role-playing-style fighting game with character stats.  And a
+third build a single page collection of useful links with affiliated
+images.\footnote{Twenty years ago, they might have been as
+innovative as Yahoo.}
 
-We have also found that while students can be intimidated by a text-based
-programming language and a professional programming environment, they also
-feel empowered and gain additional self efficacy in using such an environment.
-While we are less comfortable recommending that others regularly take similar
-approaches, our informal conversations with the campers suggest that the
-approach is worth investigating further
+In spite of these few detours, we consider the projects a particular
+success.  Students worked hard on the projects, the posters, and
+the prsentations.  We also saw particular pride in their projects.
+Many parents and campuers called and emailed after the camp asking
+for access to the projects.
+
+\subsection{Difficulties}
+
+That is not to say that the camp was a complete success.  As we
+have already noted, we are frustrated to have attracted such a small
+fraction of female campers.  It is also clear that we threw too
+much at the campers; by the time we got to the Web manipulation
+exercises on day four, many seemed lost.  It appears that our
+approach of ``focus more on concepts than underlying details'' may
+not have been the best approach if we wanted students to branch
+beyond the examples we provided.  While we have given the students
+a sense of power, particularly in their ability to create Web pages
+and hypertext stories that they can share on the Web, it may be
+that we have given them too little power to think computationally.
+
+\section{Conclusions and Future Work}
+
+The underrepresentation of many groups in computing remains an issue
+of national concern, not only because computing has the potential
+to provide fulfiling and rewarding career opportunities, but also
+because the nation needs people from a wide variety of perspectives
+building the technology that so frequently affects our daily lives.
+Although a wide variety of approaches have started to make some
+difference, it's clear the computer science education and computing
+communities must continue to explore new ways to attract and support
+members of underrepresented groups.  And it's clear that no one
+method will work; we need a spectrum of approaches to support
+a spectrum of people and perspectives.
+
+In this paper, we have explored one particular approach, the use
+of language-based computing exercises associated with the digital
+humanities in a code camp for middle-school students.  Our experience
+in this project was mixed.  While students clearly enjoyed the camp
+and we saw a few changes in attitude, the camp failed to attract a
+large number of students from our target groups.  And we clearly
+packed too much material into a one-week camp.
+
+Unfortunately, the size and character of the camper population made
+it difficult to show success or failure of the curriculum.  Because
+we had so many returning students, we do not know what the effects
+on confidence or interest would have been on students who had not
+attended a previous camp and who were not exposed to students who
+had attended a previous camp.
+
+We may not offer this camp a second time.  It is clear that if we
+do, we will need to make a variety of changes, cutting back on the
+number of activities and finding ways to better emphasize uses of
+computing beyond hypertext stories.  We will also need to find new
+ways to market the topic or to show why language computing can be
+as important as computing for social good.
+
+Nonetheless, we do see a role for exercises drawn from the digital
+humanities as a tool in broadening participation in computing.  As
+noted, the language generation and Mad Libs exercises can support
+not just the learning of computing, but also the learning of language.
+We also consider it worth exploring uses of the digital humanities
+at the college roading as an avenue to broadening participation.
+
