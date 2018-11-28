@@ -1,0 +1,60 @@
+\documentclass[sigconf]{acmart}
+
+% Material from https://www.scomminc.com/pp/acmsig/sigcse.htm#L
+\copyrightyear{2019} 
+\acmYear{2019} 
+\setcopyright{acmcopyright}
+\acmConference[SIGCSE '19]{Proceedings of the 50th ACM Technical Symposium on Computer Science Education}{February 27-March 2, 2019}{Minneapolis, MN, USA}
+\acmBooktitle{Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE '19), February 27-March 2, 2019, Minneapolis, MN, USA}
+\acmPrice{15.00}
+\acmDOI{10.1145/3287324.3287509}
+\acmISBN{978-1-4503-5890-3/19/02}
+\settopmatter{printacmref=true}
+\fancyhead{}
+
+% Some settings
+\newenvironment{blockquoteA}
+{\par\noindent\ignorespaces\slshape }
+{\par\noindent\ignorespacesafterend}
+
+\newenvironment{blockquoteB}
+{\begingroup\addtolength\leftmargin{-0.2in}\begin{quote}\slshape}
+{\end{quote}\endgroup}
+
+% https://latex.org/forum/viewtopic.php?t=7992
+\newenvironment{blockquote}{%
+  \list{} {
+    \leftmargin0.2in
+    \rightmargin\leftmargin
+  }
+  \slshape
+  \item\relax}
+{\endlist}
+
+% And the document
+\begin{document}
+\title{A Middle-School Code Camp Emphasizing Digital Humanities}
+
+\author{Yesheng Chen, Zhen Chen, Shyamala Gumidyala, Annabella Koures, Seoyeon Lee, James Msekela, Halle Remash, Nolan Schoenle, Sarah Dahlby Albright, and Samuel A. Rebelsky}
+\affiliation{Grinnell College}
+\email{{chenyesh,chenzhen,gumidyal,kouresan,leeseoyo,msekelaj,remashha,schoenle,dahlbysa,rebelsky}@grinnell.edu}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{Chen \textit{et al.}}
+
+\input{abstract.tex}
+\input{ccsxml.tex}
+\input{keywords.tex}
+
+\maketitle
+
+\newcommand{\college}{Grinnell}
+
+\input{body.tex}
+
+\input{acknowledgements.tex}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{lac} 
+
+\end{document}
