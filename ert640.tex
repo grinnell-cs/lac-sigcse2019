@@ -1,4 +1,5 @@
 \documentclass[sigconf]{acmart}
+\usepackage{balance}
 
 % Material from https://www.scomminc.com/pp/acmsig/sigcse.htm#L
 \copyrightyear{2019} 
@@ -31,6 +32,10 @@
   \item\relax}
 {\endlist}
 
+% Things that really shouldn't be full subsections
+%\newcommand{\concept}[1]{\vspace*{1ex}\noindent\textbf{#1}.}
+\newcommand{\concept}[1]{\subsection{#1}}
+
 % And the document
 \begin{document}
 \title{A Middle-School Code Camp Emphasizing Digital Humanities}
@@ -55,6 +60,7 @@
 \input{acknowledgements.tex}
 
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{lac} 
+\balance
+\bibliography{ert640} 
 
 \end{document}
