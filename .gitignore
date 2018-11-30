@@ -243,3 +243,15 @@ TSWLatexianTemp*
 
 # Strangely generated file
 comment.cut
+
+# Editor tmp files
+*.tmp
+
+# Macs are fun
+.DS_Store
+
+# Zip files for ACM
+*.zip
+
+# Text files are usually temp stuff
+*.txt
