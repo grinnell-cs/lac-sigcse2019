@@ -246,6 +246,7 @@ comment.cut
 
 # Editor tmp files
 *.tmp
+*.swp
 
 # Macs are fun
 .DS_Store
