@@ -15,18 +15,18 @@ students of color to dismiss the field.  But students are not
 just discouraged by issues of identity; Guzdial \cite{Guzdial2009}
 suggests that there are also issues of interest; many students
 perceive computing as ``irrelevant'' and ``asocial''.
-
 These are complex issues to address; a single type or level of
 intervention is not enough.  Because these biases start early,
 many educators are developing early interventions
-\cite{McGill2015,Decker2016}.  Organizations that are helping address
-this ``pipeline problem'' include Girls Who
-Code,\footnote{https://girlswhocode.com/} Black Girls
-Code,\footnote{http://www.blackgirlscode.com/}
-AnitaB.org,\footnote{https://anitab.org/}, the Girls Computing
-League,\footnote{http://girlscomputingleague.org/} and the National
-Center for Women and Information
-Technology.\footnote{https://www.ncwit.org/}
+\cite{McGill2015,Decker2016}.  
+%Organizations that are helping address
+%this ``pipeline problem'' include Girls Who
+%Code,\footnote{https://girlswhocode.com/} Black Girls
+%Code,\footnote{http://www.blackgirlscode.com/}
+%AnitaB.org,\footnote{https://anitab.org/}, the Girls Computing
+%League,\footnote{http://girlscomputingleague.org/} and the National
+%Center for Women and Information
+%Technology.\footnote{https://www.ncwit.org/}
 
 Over the past few years, our research team has explored extracurricular
 approaches that target students in elementary and middle schools.
@@ -160,7 +160,7 @@ for a camp for middle-school students, few of whom likely know what
 the humanities are.  However, by the time students reach college,
 we see a disproportionate number of women entering the
 humanities rather than the sciences.  There is also a long-standing
-sterotype that girls are generally more drawn to language and literature
+stereotype that girls are generally more drawn to language and literature
 than are boys.  For example, in a recent Brookings report, Loveless \cite{Loveless2015} observes ``\textit{The most recent results from reading tests of the National Assessment of Educational Progress (NAEP) show girls outscoring boys at every grade level and age examined. Gender differences in reading are not confined to the United States.}''
 
 Loveless also reports on other stereotypes that affect
@@ -178,25 +178,48 @@ literature.
 
 \newcommand{\afk}[1]{\textit{#1}}
 \newcommand{\proj}[1]{\textit{\textbf{#1}}}
+\renewcommand\cellalign{lt}
 
 \begin{table*}[t]
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-\textbf{Monday} 	& \textbf{Tuesday} 	& \textbf{Wednesday} 	& \textbf{Thursday} 		& \textbf{Friday} \\ \hline
-Camp Orientation 	& Opening Slideshow 	& Present: Web App	& RegExp 			& SH Awards Ceremony \\ \hline
-Intro Algorithms I	& Racket Review		& \proj{Mad Libs}	& 				& Project Work Time \\ \hline
-\afk{Icebreakers}      	& Pair Programming 	& 			& 				& \\ \hline
+\textbf{Monday} 	& \textbf{Tuesday} 	& \textbf{Wednesday} 	& \textbf{Thursday} 		& \textbf{Friday} \\ \hline \hline
+
+\makecell{Camp Orientation \\ Intro Algorithms I \\ \afk{Icebreakers}}
+	& \makecell{Opening Slideshow \\ Racket Review \\ Pair Programming} 
+	& \makecell{Present: Web App \\ \proj{Madlibs}}
+	& \makecell{RegExp}
+	& \makecell{SH Awards Ceremony \\ Project Work Time}
+	\\ \hline
+
 \afk{Snack Break} & \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break} \\ \hline
-Intro Algorithms II	& Discuss Lang. \& Code	& Intro Conditionals	& \proj{Analyze Web Pages I}	& Project Work Time \\ \hline
-Intro Racket I		& Intro Strings		& Analysis w/Files and Lists I	& \afk{Scavenger Hunt}		& \\ \hline
-\afk{Lunch} & \afk{Lunch}	& \afk{Lunch}	& \afk{Lunch}	& \afk{Lunch} \\ \hline
-\afk{Recess} & \afk{Recess}	& \afk{Recess}	& \afk{Recess}	& \afk{Recess} \\ \hline
-Intro Racket II		& Language Generation	& Analysis w/Files and Lists II	& \proj{Analyze Web Pages II} 	& Poster Prep \\ \hline
-Intro Scavenger Hunt	& Racket Web Server 	& Present: Mad Libs	& Transform Web Pages		& Presentation Prep \\ \hline
-Intro HTML \& CSS 	&			& \afk{Scavenger Hunt}	& \afk{Scavenger Hunt}		& \\ \hline
-\afk{Snack Break} & \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break} \\ \hline
-\proj{Hypertext Stories}& \proj{Web App}	& Project Intro 	& Project Work Time		& Welcome Visitors \\ \hline
-Present: Stories 	& \afk{Scavenger Hunt}	& Project Brainstorm	& 				& Show and Tell \\ \hline
+
+\makecell{Intro Algorithms II \\ Intro Racket I}
+	& \makecell{Discuss Lang. \& Code \\ Intro Strings}
+	& \makecell{Intro Conditionals \\ Analysis w/Files \& Lists I}
+	& \makecell{\proj{Analyze Web Pages I} \\ \afk{Scavenger Hunt}}
+	& Project Work Time
+	\\ \hline
+
+\afk{Lunch + Recess} & \afk{Lunch + Recess} & \afk{Lunch + Recess} & \afk{Lunch + Recess} & \afk{Lunch + Recess}
+	\\ \hline
+
+\makecell{Intro Racket II \\ \afk{Intro Scavenger Hunt} \\ Intro HTML \& CSS}
+	& \makecell{Language Generation \\ Racket Web Server}
+	& \makecell{Analysis w/Files \& Lists II \\ Present: Madlibs \\ \afk{Scavenger Hunt}}
+	& \makecell{\proj{Analyze Web Pages II} \\ Transform Web Pages \\ \afk{Scavenger Hunt}}
+	& \makecell{Poster Prep \\ Presentation Prep}
+	\\ \hline
+
+\afk{Snack Break} & \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break}	& \afk{Snack Break} 
+	\\ \hline
+
+\makecell{\proj{Hypertext Stories} \\ Present: Stories}
+	& \makecell{\proj{Web App} \\ \afk{Scavenger Hunt}}
+	& \makecell{Project Intro \\ Project Brainstorm}
+	& \makecell{Project Work Time}
+	& \makecell{Welcome Visitors \\ Show and Tell}
+	\\ \hline
 \end{tabular}
 \caption{Camp Curriculum.  ``Away from keyboard'' activities appear in italic and mini-projects appear in bold italic.}
 \label{table:curriculum}
@@ -292,16 +315,16 @@ at the forms of the different rules deepened students' understanding
 of the structure of language, which we expect to be useful for both
 artificial and natural languages.
 
-\subsubsection{Mad Libs}
+\subsubsection{Madlibs}
 
 As a counterpart to the language generation activity, we also had students
-build Web-based ``Mad Libs'' programs which prompt for a variety of types
+build Web-based ``Madlibs'' programs which prompt for a variety of types
 of words (e.g., an adjective, a color, a proper noun) and then put those
 into a template to construct a story.  We provided students with a basic
 framework, both the form and the script that processes the form.  They
 then added new inputs and revised the template.
 
-Most students were familiar with Mad Libs, which provided a level
+Most students were familiar with Madlibs, which provided a level
 of comfort. As in the other exercises, students enjoyed having us
 read the generated stories aloud;  Knowing that we would do so
 proved motivational.  The structure of the program
@@ -350,7 +373,7 @@ programming in school.  Hence, we looked for languages that would
 feel less familiar to the students, but would still be age appropriate.
 
 We settled on a somewhat nontraditional approach, Racket.  While a
-LISP descendent may not seem to be an appropriate language for
+LISP descendant may not seem to be an appropriate language for
 middle school students, the Bootstrap
 project\footnote{http://www.bootstrapworld.org/} \cite{Bootstrap-McClanahan,Bootstrap-SPLASH2013,Bootstrap-SIGCSE2018} has shown that
 Racket can be quite successful for this age group.
@@ -499,7 +522,7 @@ lot about computing}, $p < 0.05$), and 6 (\textit{I know more than
 my friends about computers}, $p < 0.05$).  We note that while there
 was a statistically significant increase in the question 2 responses
 and not in the question 3 responses, question 3 had a higher average
-score on the pre-surveys and the aveage post-survey score for the two
+score on the pre-surveys and the average post-survey score for the two
 questions was the same.
 
 % Although we separately analyzed survey responses for boys and girls,
@@ -563,25 +586,25 @@ students gain a deeper understanding of language.
 \concept{Projects}
 We had hoped that students would evenly distribute among the various
 approaches to projects, drawing upon one or more of the methods
-from the mini projects: Hypertext stories, language generation, Mad
-libs, text analysis, and Web page manipulation.  However, the
+from the mini projects: Hypertext stories, language generation, Madlibs, 
+text analysis, and Web page manipulation.  However, the
 majority decided to write ``choose your own adventure'' stories.
 
-There were, of course, exceptions.  Two teams adapted the basic Mad
-Libs model.  Two teams worked with counselors to build more advanced
-projects that combined Mad Libs with hypertext stories.\footnote{While
+There were, of course, exceptions.  Two teams adapted the basic Madlibs 
+model.  Two teams worked with counselors to build more advanced
+projects that combined Madlibs with hypertext stories.\footnote{While
 the students could modify existing programs, it was clear that they
 had not developed the mastery necessary to build more sophisticated
 programs.  Counselors therefore provided additional support.}
-In one case, the initial Mad Libs answers carried from page to page,
+In one case, the initial Madlibs answers carried from page to page,
 so that characters and other words would reappear.  In the other,
 students asked questions on each page and accumulated data for a
 final page.  Two teams explored issues of language generation,
 creating more complex texts and, in one case, attempting to including
 rhyming in poems.  
-A few teams even managed to avoid the ``language and code'' theme.
-One built a time-wasting click counter.  A second attempted to build
-a role-playing-style fighting game with character stats.  And a
+A few teams avoided the ``language and code'' theme.
+One built a time-wasting click counter.  A second started
+a role-playing-style fighting game with character stats.  A
 third built a single page collection of useful links with affiliated
 images.\footnote{Twenty years ago, they might have been as
 innovative as Yahoo.}
@@ -614,7 +637,7 @@ building the technology that so frequently affects our daily lives.
 Although many approaches have started to make some difference, it
 is clear the computer science education and computing communities
 must continue to explore new ways to attract and support members
-of underrepresented groups.  And it's clear that no one method will
+of underrepresented groups.  It's clear that no one method will
 work; we need a spectrum of approaches to support a range of
 people and perspectives.
 
@@ -635,13 +658,12 @@ of only students who had not attended a previous camp.
 We may not offer this camp a second time.  It is clear that if we
 do, we will need to make a variety of changes, cutting back on the
 number of activities and finding ways to better encourage a broader
-variety of projects.  We will also need to find new ways to market
-the topic or to show why language computing can be as important as
-computing for social good.
+variety of projects.  We will also need to find new ways to show
+the applicability of the topic.
 
 Nonetheless, we do see a role for exercises drawn from DH as a tool
 in broadening participation in computing.  As noted, the language
-generation and Mad Libs exercises can help student learn not only
+generation and Madlibs exercises can help student learn not only
 about computing, but also about language.  It may be that the
 projects are better used individually, in the context of other
 outreach activities, rather than combined into a single week-long
