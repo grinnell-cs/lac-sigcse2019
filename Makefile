@@ -1,16 +1,24 @@
 default: ert640.pdf
 
-%.pdf: %.tex %.bib *.tex
+%.pdf: %.tex bibliography.bib *.tex
 	pdflatex $*
 	bibtex $*
 	pdflatex $*
 	pdflatex $*
 
-anonymous.bib: bibliography-primary.bib bibliography-anonymous.bib
-	cat $^ > $@
+ZIPFILES = \
+	Makefile \
+	ACM-Reference-Format.bst \
+	acmart.cls \
+	abstract.tex \
+	acknowledgements.tex \
+	bibliography.bib \
+	body.tex \
+	ccsxml.tex \
+	ert640.tex \
+	keywords.tex \
+	images
 
-lac.bib: bibliography-primary.bib bibliography-glimmer.bib
-	cat $^ > $@
-
-ert640.bib: bibliography-primary.bib bibliography-glimmer.bib
-	cat $^ > $@
+ert640.zip: $(ZIPFILES)
+	rm -f $@
+	zip -r $@ $(ZIPFILES)
